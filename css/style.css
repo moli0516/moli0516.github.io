@@ -10,27 +10,37 @@ body {
     font-size: 24px;
 }
 .top-list {
-    background-color: rgb(53, 53, 53);
+    background-color: #333;
     width: 100%;
     overflow: hidden;
     z-index: 1;
     top: 0;
     position: fixed;
-    height: 46px;
+    height: 60px;
+    text-align: center;
 }
 .top-list a {
-    padding: 17px 16px;
+    padding: 14px 16px;
     color:azure;
     text-decoration: none;
-    font-size:26px;
+    font-size:40px;
 }
 .top-list a:hover {
-    background-color: rgb(255, 255, 255);
-    color:rgb(36, 36, 36);
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
 }
 .top-list a.active {
-    background-color: #8f8f8f;
+    background-color: #00cf6f;
     color:azure;
+    font-weight: bolder;
+}
+.top-list img {
+    left: 0;
+    position: fixed;
+    padding-left: 4px;
+    padding-top: 4px;
+    height: 50px;
+    background-color: #333;
 }
 .main {
     background-color: darkgrey;
@@ -43,7 +53,7 @@ body {
 }
 .title {
     max-width: 600px;
-    padding-top: 30px;
+    padding-top: 60px;
     padding-bottom: 16px;
     margin-left: auto;
     margin-right: auto;
@@ -63,21 +73,23 @@ body {
     position: relative;
 }
 .display-left{
-    top: 50%;
-    left:25%;
+    top: 70%;
+    left: 25%;
+    position: absolute;
 }
 .display-right{
-    top: 50%;
-    right:25%;
+    top: 70%;
+    right: 25%;
+    position: absolute;
 }
-.button{
+.project button{
     background-color: rgb(53, 53, 53);
     color:azure;
-    padding:8px 16px;
+    padding:8px 12px;
     border:none;
     text-decoration: none;
 }
-.button:hover{
+.project button:hover{
     background-color: rgb(255, 255, 255);
     color:rgb(36, 36, 36);
 }
@@ -141,4 +153,47 @@ body {
     color:azure;
     text-decoration: none;
     font-size:30px;
+}
+.contact-1{
+    max-width: 400px;
+    padding-top: 30px;
+    padding-bottom: 16px;
+    margin-left: 25%;
+    margin-right: auto;
+}
+.contact-1 h1{
+    text-align: center;
+}
+.contact-1 p {
+    text-align: justify;
+}
+.contact-icon{
+    text-align: center;
+}
+.contact-icon img{
+    height:50px;
+    width:50px;
+}
+.contact-icon img:hover {
+    background-color: rgb(255, 255, 255);
+    color:rgb(36, 36, 36);
+}
+.contact-2{
+    max-width: 400px;
+    padding-top: 30px;
+    padding-bottom: 16px;
+    margin-left: auto;
+    margin-right: 25%
+}
+.contact-2 img{
+    height:300px;
+    top: 30%;
+    position: absolute;
+}
+.contact-3{
+    max-width: 1000px;
+    padding-top: 50px;
+    padding-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
 }
