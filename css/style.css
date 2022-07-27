@@ -109,24 +109,6 @@ body {
     color: #8f8f8f;
     text-align: center;
 }
-.social-media{
-    right: 0;
-    top: 75%;
-    width: 30px;
-    height:93px;
-    background-color: rgb(53, 53, 53);
-    position: fixed;
-    overflow-x: hidden;
-}
-.social-media img{
-    text-align: center;
-    height:26px;
-    width:30px;
-}
-.social-media img:hover {
-    background-color: rgb(255, 255, 255);
-    color:rgb(36, 36, 36);
-}
 .imformation{
     max-width: 700px;
     padding-bottom: 16px;
