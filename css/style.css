@@ -1,186 +1,133 @@
 @font-face {
-    font-family: Font;
-    src: url(Microsoft-Sans-Serif.ttf);
+    font-family: font;
+    src: url(Roboto-Regular.ttf);
 }
 body {
-    font-family: Font;
+    font-family: font;
     margin:0;
     padding:0;
     overflow-x:hidden;
     font-size: 24px;
+    background-color: #1E2749;
+    color: #FAFAFF;
 }
-.top-list {
-    background-color: #333;
+.banner-area {
+    background-image: url(1474291154383.jpg);
+    background-size: cover;
+    background-position: center center;
+    top: 0px;
+    padding: 10px 0px;
+    height: 100vh;
     width: 100%;
-    overflow: hidden;
-    z-index: 1;
+    position: fixed;
+}
+.banner-area:after {
+    content: '';
+    position: absolute;
     top: 0;
-    position: fixed;
-    height: 60px;
-    text-align: center;
-}
-.top-list a {
-    padding: 14px 16px;
-    color:azure;
-    text-decoration: none;
-    font-size:40px;
-}
-.top-list a:hover {
-    background-color: #ffffff;
-    color:rgb(0, 0, 0);
-}
-.top-list a.active {
-    background-color: #00cf6f;
-    color:azure;
-    font-weight: bolder;
-}
-.top-list img {
     left: 0;
-    position: fixed;
-    padding-left: 4px;
-    padding-top: 4px;
-    height: 50px;
-    background-color: #333;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #30343F;
+    opacity: .7;
+    z-index: -1;
 }
-.dropdown {
-    
-}
-.main {
-    background-color: darkgrey;
-}
-.title h1 {
+.banner-area h1 {
+    padding-top: 22%;
+    font-size: 60px;
     text-align: center;
 }
-.title p {
-    text-align: justify;
-}
-.title {
-    max-width: 600px;
-    padding-top: 60px;
-    padding-bottom: 16px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.project h1{
-    text-align: center;
-}
-.project {
-    text-align: center;
-    max-width: 800px;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.display-container{
+.container {
+    background-color: #1E2749;
+    color: #FAFAFF;
+    width: 100%;
+    height: 100%;
+    top: 600px;
+    border-radius: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
     position: relative;
 }
-.display-left{
-    top: 70%;
-    left: 25%;
-    position: absolute;
+.text-box {
+    border-radius: 25px;
+    background-color: #30343F;
+    padding: 40px;
+    margin: 40px auto 40px auto;
+    width: 1320px;
 }
-.display-right{
-    top: 70%;
-    right: 25%;
-    position: absolute;
-}
-.project button{
-    background-color: rgb(53, 53, 53);
-    color:azure;
-    padding:8px 12px;
-    border:none;
-    text-decoration: none;
-}
-.project button:hover{
-    background-color: rgb(255, 255, 255);
-    color:rgb(36, 36, 36);
-}
-.footer{
-    background-color: rgb(53, 53, 53);
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-    bottom: 0;
-    height: 40px;
-}
-.footer p{
-    font-size: 15px;
-    color: #8f8f8f;
-    text-align: center;
-}
-.imformation{
-    max-width: 700px;
-    padding-bottom: 16px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:#8f8f8f;
-    text-align: center;
-}
-.imformation h1 {
-    text-align: center;
-    color:azure;
-    background: rgb(53, 53, 53);
-}
-.imformation a {
-    padding: 17px 16px;
-    color:azure;
-    text-decoration: none;
-    font-size:50px;
-    padding-bottom: 16px;
-}
-.imformation a:hover {
-    background-color: rgb(255, 255, 255);
-    color:rgb(36, 36, 36);
-}
-.imformation p {
-    padding: 17px 16px;
-    color:azure;
-    text-decoration: none;
-    font-size:30px;
-}
-.contact-1{
-    max-width: 400px;
-    padding-top: 30px;
-    padding-bottom: 16px;
-    margin-left: 25%;
-    margin-right: auto;
-}
-.contact-1 h1{
-    text-align: center;
-}
-.contact-1 p {
+.text-box p {
     text-align: justify;
 }
-.contact-icon{
-    text-align: center;
+.text-box h3 {
+    text-align: justify;
 }
-.contact-icon img{
-    height:50px;
-    width:50px;
-    padding-left: 10px;
-    padding-right: 10px;
+.text-box:hover {
+    background-color: #273469;
+    width: 1380px;
 }
-.contact-icon img:hover {
-    color:rgb(36, 36, 36);
-    background-color: #ffffff;
+.row {
+    min-height: 300px;
+    margin: auto;
+    width: 1420px;
+    display: flex;
+    margin-bottom: 40px;
 }
-.contact-2{
-    max-width: 400px;
-    padding-top: 30px;
-    padding-bottom: 16px;
-    margin-left: auto;
-    margin-right: 25%
+
+.row .skill-box {
+    flex: 1;
+    border-radius: 25px;
+    background-color: #30343F;
+    padding: 40px;
+    margin: 10px;
+    transition: 500ms;
 }
-.contact-2 img{
-    height:300px;
-    top: 30%;
-    position: absolute;
+.skill-box p {
+    font-size: 20px;
+    text-align: justify;
 }
-.contact-3{
-    max-width: 1000px;
-    padding-top: 50px;
-    padding-bottom: 16px;
+.skill-box h3 {
+    text-align: justify;
+}
+.skill-box:hover {
+    background-color: #273469;
+}
+.row .github-box {
+    flex: 1;
+    border-radius: 25px;
+    background-color: #30343F;
+    padding: 40px;
+    margin: 10px;
+    transition: 500ms;
+}
+.github-box h3 {
+    text-align: justify;
+}
+.github-box img {
+    display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.github-box:hover {
+    background-color: #273469;
+}
+.repos-row{
+    display: flex;
+}
+.repos-row .repos {
+    flex: 50%;
+    padding: 40px;
+}
+.repos img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.reveal{
+    position: relative;
+    opacity: 0;
+    transition: 500ms ease-in;
+}
+.reveal.active{
+    opacity: 1;
 }
