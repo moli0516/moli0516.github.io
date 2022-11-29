@@ -82,12 +82,15 @@ body {
     margin: 2%;
     transition: 500ms;
 }
-.skill-box p {
+.skill-box span {
     font-size: 20px;
     text-align: justify;
 }
 .skill-box h3 {
     text-align: justify;
+}
+.skill-box img{
+    vertical-align: middle;
 }
 .skill-box:hover {
     background-color: #273469;
