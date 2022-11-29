@@ -54,7 +54,7 @@ body {
     background-color: #30343F;
     padding: 40px;
     margin: 40px auto 40px auto;
-    width: 75%;
+    width: 70%;
 }
 .text-box p {
     text-align: justify;
@@ -64,12 +64,12 @@ body {
 }
 .text-box:hover {
     background-color: #273469;
-    width: 79%;
+    width: 74%;
 }
 .row {
     min-height: 300px;
     margin: auto;
-    width: 75%;
+    width: 78%;
     display: flex;
     margin-bottom: 40px;
 }
@@ -79,7 +79,7 @@ body {
     border-radius: 25px;
     background-color: #30343F;
     padding: 40px;
-    margin: 10px;
+    margin: 2%;
     transition: 500ms;
 }
 .skill-box p {
