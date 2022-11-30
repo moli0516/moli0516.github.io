@@ -91,6 +91,17 @@ body {
 .skill-box img{
     vertical-align: middle;
 }
+.skill-box a{
+    border-radius: 25px;
+    background-color: #9970FF;
+    padding: 10px;
+    color: #FAFAFF;
+    text-decoration: none;
+}
+.skill-box a:hover{
+    background-color: #FAFAFF;
+    color: #9970FF;
+}
 .skill-box:hover {
     background-color: #273469;
     transition: 500ms;
