@@ -75,7 +75,6 @@ body {
     display: flex;
     margin-bottom: 40px;
 }
-
 .row .skill-box {
     flex: 1;
     border-radius: 25px;
@@ -146,17 +145,21 @@ body {
 }
 .contact a{
     flex: 33%;
-    margin: 50px;
+    margin: 20px;
     border-radius: 25px;
     background-color: #9970FF;
     padding: 20px;
     color: #FAFAFF;
     text-decoration: none;
-    transition: 500ms;
+    transition: 250ms;
 }
 .contact a:hover{
     background-color: #FAFAFF;
     color: #9970FF;
+}
+.contact a:active{
+    background-color: #757575;
+    color: #b394ff;
 }
 .reveal{
     position: relative;
@@ -165,4 +168,37 @@ body {
 }
 .reveal.active{
     opacity: 1;
+}
+@media (max-width: 600px){
+    .row {
+        display: flex;
+        min-height: 300px;
+        margin: auto;
+        width: 78%;
+        display: flex;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .repos-row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .contact .row{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .contact a{
+        flex: 33%;
+        margin: 10px;
+        border-radius: 25px;
+        background-color: #9970FF;
+        padding: 15px;
+        color: #FAFAFF;
+        text-decoration: none;
+        transition: 500ms;
+    }
 }
