@@ -34,8 +34,8 @@ body {
     z-index: -1;
 }
 .banner-area h1 {
-    padding-top: 22%;
-    font-size: 60px;
+    padding-top: 18%;
+    font-size: 100px;
     text-align: center;
 }
 .container {
@@ -88,20 +88,6 @@ body {
 .skill-box h3 {
     text-align: justify;
 }
-.skill-box img{
-    vertical-align: middle;
-}
-.skill-box a{
-    border-radius: 25px;
-    background-color: #9970FF;
-    padding: 10px;
-    color: #FAFAFF;
-    text-decoration: none;
-}
-.skill-box a:hover{
-    background-color: #FAFAFF;
-    color: #9970FF;
-}
 .skill-box:hover {
     background-color: #273469;
     transition: 500ms;
@@ -137,6 +123,34 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.contact{
+    margin: 100px auto 50px auto;
+    text-align: center;
+}
+.contact h1{
+    margin-bottom: 100px;
+}
+.contact .row{
+    display: flex;
+    justify-content: center;
+}
+.contact img{
+    vertical-align: middle;
+}
+.contact a{
+    flex: 33%;
+    margin: 50px;
+    border-radius: 25px;
+    background-color: #9970FF;
+    padding: 20px;
+    color: #FAFAFF;
+    text-decoration: none;
+    transition: 500ms;
+}
+.contact a:hover{
+    background-color: #FAFAFF;
+    color: #9970FF;
 }
 .reveal{
     position: relative;
