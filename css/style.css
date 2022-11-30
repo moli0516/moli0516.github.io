@@ -32,11 +32,13 @@ body {
     background-color: #30343F;
     opacity: .7;
     z-index: -1;
+    transition: 1s;
 }
 .banner-area h1 {
     padding-top: 18%;
     font-size: 100px;
     text-align: center;
+    opacity: 1;
 }
 .container {
     background-color: rgba(30, 39, 73, 0.8);

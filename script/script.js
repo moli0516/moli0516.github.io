@@ -12,4 +12,20 @@ function reveal(){
     }
 }
 
+$(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+  
+    $('.banner-area h1').css({
+        opacity: function() {
+          var elementHeight = $(this).height(),
+              opacity = (((elementHeight - scrollTop) / elementHeight / 10)) + 1;  
+          return opacity;
+        },
+        fontSize: function() {
+            var elementHeight = $(this).height(),
+            fontSize = (((elementHeight - scrollTop) / elementHeight / 10)) + 100;
+            return fontSize;
+        }
+      });
+  });
 window.addEventListener("scroll", reveal)
