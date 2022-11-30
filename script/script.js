@@ -5,7 +5,7 @@ if (history.scrollRestoration) {
         window.scrollTo(0, 0);
     }
 }
- 
+
 function reveal(){
     var reveals = document.querySelectorAll(".reveal")
     for (var i = 0; i< reveals.length; i++){
@@ -26,12 +26,12 @@ $(window).scroll(function() {
     $('.banner-area h1').css({
         opacity: function() {
           var elementHeight = $(this).height(),
-              opacity = (((elementHeight - scrollTop) / elementHeight / 10)) + 1;  
+              opacity = (((elementHeight - scrollTop) / elementHeight / 15)) + 1;  
           return opacity;
         },
         fontSize: function() {
             var elementHeight = $(this).height(),
-            fontSize = (((elementHeight - scrollTop) / elementHeight / 10)) + 100;
+            fontSize = (((elementHeight - scrollTop) / elementHeight * 0.7)) + 100;
             return fontSize;
         }
       });
