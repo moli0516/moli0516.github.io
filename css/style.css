@@ -82,6 +82,7 @@ body {
     background-color: #30343F;
     padding: 40px;
     margin: 2%;
+    display: inline-block;
 }
 .skill-box span {
     font-size: 20px;
@@ -89,6 +90,9 @@ body {
 }
 .skill-box h3 {
     text-align: justify;
+}
+.skill-box img {
+    vertical-align: middle;
 }
 .skill-box:hover {
     background-color: #273469;
