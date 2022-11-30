@@ -189,7 +189,7 @@ body {
     }
     .row {
         display: flex;
-        min-height: 300px;
+        min-height: 950px;
         margin: auto;
         width: 78%;
         display: flex;
@@ -197,7 +197,15 @@ body {
         flex-wrap: wrap;
         flex-direction: column;
     }
+    .row .github-box {
+        flex: 1;
+        border-radius: 25px;
+        background-color: #30343F;
+        padding: 40px;
+        margin: 2%;
+    }
     .repos-row{
+        min-height: 500px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
