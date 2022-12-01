@@ -142,7 +142,7 @@ body {
 .contact img{
     vertical-align: middle;
 }
-.contact a{
+.contact a {
     flex: 33%;
     margin: 20px;
     border-radius: 25px;
@@ -167,6 +167,10 @@ body {
     background-color: #30343F;
     justify-content: center;
     transition: 500ms cubic-bezier(0, 1.18, 1, 1);
+}
+.footer a {
+    color: #FAFAFF;
+    text-decoration: none;
 }
 .footer:hover {
     background-color: #273469;
