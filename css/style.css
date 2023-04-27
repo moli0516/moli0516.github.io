@@ -11,6 +11,23 @@ body {
     background-color: #1E2749;
     color: #FAFAFF;
 }
+.typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid rgb(255, 255, 255);
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: 
+      typing 3.5s steps(35, end) infinite,
+      blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0}
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+}
 .banner-area {
     background-image: url(1474291154383.jpg);
     background-size: cover;
