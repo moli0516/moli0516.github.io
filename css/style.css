@@ -74,7 +74,7 @@ body {
     display: flex;
     margin-bottom: 40px;
 }
-.row .skill-box {
+.skill-box {
     flex: 1;
     border-radius: 25px;
     background-color: #30343F;
@@ -183,6 +183,24 @@ body {
 .reveal.active{
     opacity: 1;
 }
+.solutionBox-row {
+    min-height: 200px;
+    margin: auto;
+    width: 78%;
+    display: flex;
+    margin-bottom: 40px;
+}
+.topic {
+    align-items: last baseline;
+    font-size: 30px;
+    flex: 33%;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #ffffff62;
+    color: #000000;
+    text-decoration: none;
+    transition: 250ms;
+}
 @media (max-width: 1300px){
     .banner-area h1 {
         padding-top: 80%;
@@ -238,4 +256,5 @@ body {
         text-decoration: none;
         transition: 500ms;
     }
+    
 }
