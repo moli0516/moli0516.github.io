@@ -1,0 +1,438 @@
+diff --git a/css/main.css b/css/main.css
+new file mode 100644
+index 0000000..94b4f6c
+--- /dev/null
++++ b/css/main.css
+@@ -0,0 +1,61 @@
++@font-face { font-family: "Roboto Local"; src: url(Roboto-Regular.ttf); font-display: swap; }
++:root { --bg: #0f1226; --surface: #181c3a; --surface-2: #232955; --text: #f2f3ff; --muted: #a9aed3; --accent: #9970ff; --accent-2: #4cc9f0; --radius: 18px; }
++* { box-sizing: border-box; }
++html { scroll-behavior: smooth; scroll-padding-top: 80px; }
++body { margin: 0; font-family: "Roboto Local", system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 18px; line-height: 1.7; background: var(--bg); color: var(--text); }
++a { color: inherit; }
++code { background: rgba(255, 255, 255, .08); padding: 1px 6px; border-radius: 6px; font-size: .9em; }
++.nav { position: fixed; inset: 0 0 auto 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 14px 5vw; background: rgba(15, 18, 38, .75); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255, 255, 255, .06); }
++.brand { font-weight: 700; font-size: 22px; text-decoration: none; }
++.nav nav { display: flex; gap: 22px; }
++.nav nav a { text-decoration: none; color: var(--muted); font-size: 16px; transition: color .2s; }
++.nav nav a:hover { color: var(--text); }
++.hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 100px 6vw 60px; background: linear-gradient(rgba(15, 18, 38, .72), var(--bg)), url(1474291154383.jpg) center / cover no-repeat; }
++.eyebrow { color: var(--accent-2); letter-spacing: .12em; text-transform: uppercase; font-size: 14px; margin: 0; }
++.hero h1 { font-size: clamp(42px, 9vw, 96px); line-height: 1.1; margin: 12px 0; }
++.grad { background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
++.lead { max-width: 600px; color: var(--muted); font-size: 20px; }
++.cta, .contact-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 16px; }
++.btn { display: inline-block; padding: 12px 26px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .2); text-decoration: none; transition: transform .2s, background .2s; }
++.btn:hover { transform: translateY(-2px); background: var(--surface-2); }
++.btn.primary { background: var(--accent); border-color: var(--accent); }
++.btn.primary:hover { background: #b394ff; }
++.section { max-width: 1040px; margin: 0 auto; padding: 64px 6vw; }
++.section h2 { font-size: 32px; margin: 0 0 20px; }
++.section h2::after { content: ""; display: block; width: 48px; height: 4px; margin-top: 8px; border-radius: 2px; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
++.sub { margin: 40px 0 8px; }
++.grid { display: grid; gap: 20px; }
++.grid.two { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
++.grid.skills { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
++.grid.stats { margin-top: 20px; }
++.card { background: var(--surface); border-radius: var(--radius); padding: 24px; transition: transform .25s, background .25s; }
++.card:hover { transform: translateY(-4px); background: var(--surface-2); }
++.card h3 { margin-top: 0; }
++.project { display: flex; flex-direction: column; font-size: 16px; line-height: 1.6; }
++.project h3 { font-size: 22px; margin: 4px 0 8px; }
++.project p { margin: 0 0 10px; color: var(--muted); }
++.project .tag { color: var(--accent-2); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 0; }
++.project ul { margin: 0 0 14px; padding-left: 20px; }
++.project li { margin-bottom: 6px; }
++.tech { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
++.tech span { padding: 2px 10px; border-radius: 999px; background: rgba(153, 112, 255, .2); font-size: 13px; }
++.project .link { margin-top: auto; color: var(--accent-2); text-decoration: none; font-weight: 700; }
++.project .link:hover { text-decoration: underline; }
++.more { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 16px; }
++.more span { color: var(--muted); }
++.more a { color: var(--accent-2); }
++.stat { display: flex; align-items: center; justify-content: center; text-decoration: none; }
++.stat img { max-width: 100%; height: auto; }
++.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
++.chips li { display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: rgba(255, 255, 255, .06); font-size: 16px; }
++.chips img { width: 22px; height: 22px; }
++.timeline { list-style: none; margin: 0; padding: 0 0 0 20px; border-left: 2px solid var(--surface-2); }
++.timeline li { position: relative; padding: 0 0 20px 20px; }
++.timeline li::before { content: ""; position: absolute; left: -27px; top: 10px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
++.timeline span { display: inline-block; min-width: 72px; color: var(--accent-2); font-weight: 700; }
++.footer { text-align: center; padding: 32px; color: var(--muted); border-top: 1px solid rgba(255, 255, 255, .06); }
++.footer a { text-decoration: none; }
++.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
++.reveal.active { opacity: 1; transform: none; }
++@media (max-width: 640px) { .nav nav { gap: 12px; } .nav nav a { font-size: 14px; } .nav nav a:nth-child(3), .nav nav a:nth-child(4) { display: none; } }
++@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } .reveal { opacity: 1; transform: none; } }
+diff --git a/index.html b/index.html
+index 4ae0969..86e2676 100644
+--- a/index.html
++++ b/index.html
+@@ -1,219 +1,130 @@
+ <!DOCTYPE html>
+-<html>
+-    <head>
+-        <meta charset="utf-8">
+-        <title>
+-            Moli
+-        </title>
+-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+-        <script src="script/script.js"></script>
+-        <link rel="stylesheet" href="css/style.css" />
+-    </head>
+-    <body>
+-        <div class="banner-area">
+-            <h1>
+-                Hi, Moli's here!
+-            <h1>
+-        </div>
+-        <div class="container reveal">
+-            <div class="text-box reveal">
+-                <h3>
+-                    Intro
+-                </h3>
+-                <p>
+-                    Hi, I'm moli! I'm a software engineer who is currently having high school.
+-                </p>
+-                <p>
+-                    I mainly do Python and almost forget Javascript.
+-                </p>
+-                <p>
+-                    I also do some HTML stuff!
+-                </p>
+-                <p>
+-                    Willing to learn swift and vue.
+-                </p>
++<html lang="en">
++<head>
++    <meta charset="utf-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1">
++    <title>Moli | CS Undergraduate &middot; Quantitative Analytics &amp; Full-Stack Developer</title>
++    <meta name="description" content="Moli is a Computer Science undergraduate in Hong Kong focused on data science, machine learning, quantitative analytics and full-stack development.">
++    <meta name="theme-color" content="#0f1226">
++    <meta property="og:title" content="Moli | CS Undergraduate &amp; Quantitative Developer">
++    <meta property="og:description" content="Game engine, quant ML pipelines and computer vision projects by Moli.">
++    <meta property="og:type" content="website">
++    <link rel="stylesheet" href="css/main.css">
++    <script src="script/main.js" defer></script>
++</head>
++<body>
++    <header class="nav">
++        <a class="brand" href="#top">Moli</a>
++        <nav>
++            <a href="#about">About</a>
++            <a href="#projects">Projects</a>
++            <a href="#skills">Skills</a>
++            <a href="#earlier">Earlier</a>
++            <a href="#contact">Contact</a>
++        </nav>
++    </header>
++
++    <main id="top">
++        <section class="hero">
++            <p class="eyebrow">Hong Kong &middot; Computer Science undergraduate</p>
++            <h1>Hi, I'm <span class="grad">Moli</span>.</h1>
++            <p class="lead">Quantitative analytics, applied machine learning and full-stack development. I like building the whole system, not just the model.</p>
++            <div class="cta">
++                <a class="btn primary" href="#projects">Highlight projects</a>
++                <a class="btn" href="#contact">Get in touch</a>
+             </div>
+-            <div class="text-box reveal">
+-                <h3>
+-                    Profile
+-                </h3>
+-                <p>
+-                    Kau Yan Collage F.5 (Phys ICT M2)
+-                </p>
+-                <p>
+-                    Participant of AI x HK OpenCup 2022
+-                </p>
+-                <p>
+-                    Participant of Hong Kong Physics Olympiad 2023	
+-                </p>
+-                <p>
+-                    Participant of Metaverse Creator of Tommorow workshop and competition
+-                </p>
+-                <p>
+-                    First class prize holder of HKIE Electronic Division STEM Bootcamps 2023 1-day STEM Robotics Workshop
+-                </p>
+-                <p>
+-                    Participant of HKOI 23-24
+-                </p>
++        </section>
++
++        <section id="about" class="section reveal">
++            <h2>About</h2>
++            <p>I'm a Year 2 Computer Science student in Hong Kong, focused on data science, machine learning and web systems. I enjoy statistical inference and systems development equally, which shows in my projects: data pipelines, leakage-aware modelling, and tools that turn a model into something usable.</p>
++            <p>I work mainly in Python, C++ and JavaScript/TypeScript, with Next.js, PostgreSQL and Supabase on the web side. I'm currently interested in computer vision, big data analytics and data mining.</p>
++        </section>
++
++        <section id="projects" class="section reveal">
++            <h2>Highlight projects</h2>
++            <div class="grid two">
++                <article class="card project">
++                    <p class="tag">Game engine &middot; C++17</p>
++                    <h3>Gality Engine</h3>
++                    <p>A from-scratch 2D visual novel and narrative game engine, built around a screenplay-style scripting language.</p>
++                    <ul><li>Custom <code>.gality</code> DSL with a Python compiler that flags dangling nodes and tag mismatches before runtime</li><li>Zero-GC C++17 core with an LRU asset cache, encrypted asset pack, GLSL post-processing and 128-step rollback</li><li>VS Code extension with syntax highlighting, linting and go-to-definition</li><li>Ships with a ~3000-node demo story, 10 endings</li></ul>
++                    <div class="tech"><span>C++17</span><span>SFML 3</span><span>Python</span><span>GLSL</span><span>CMake</span></div>
++                    <a class="link" href="https://github.com/moli0516/Gality" target="_blank" rel="noopener">View on GitHub &rarr;</a>
++                </article>
++                <article class="card project">
++                    <p class="tag">Quant ML &middot; Python</p>
++                    <h3>HKJC Racing Quant Pipeline</h3>
++                    <p>An end-to-end ETL and machine learning research system for Hong Kong horse-racing data, from scraping to backtesting.</p>
++                    <ul><li>Async scraper, cleaners and SQLite store feeding a leakage-guarded feature pipeline</li><li>XGBoost ranker with Optuna tuning and expanding-window walk-forward evaluation</li><li>Compared against a market-favourite baseline and reports negative results honestly</li></ul>
++                    <div class="tech"><span>Python</span><span>XGBoost</span><span>Optuna</span><span>SQLAlchemy</span><span>aiohttp</span></div>
++                    <a class="link" href="https://github.com/moli0516/hkjc-quant-model" target="_blank" rel="noopener">View on GitHub &rarr;</a>
++                </article>
++                <article class="card project">
++                    <p class="tag">Quant ML &middot; Python</p>
++                    <h3>Crypto Quant Model</h3>
++                    <p>A quantitative trading research framework covering data collection, cleaning, feature engineering, model training and execution modules.</p>
++                    <ul><li>Built-in data-leakage prevention</li><li>Unified command-line interface</li><li>Modular design with documented architecture</li></ul>
++                    <div class="tech"><span>Python</span><span>Pandas</span><span>CLI</span></div>
++                    <a class="link" href="https://github.com/moli0516/crypto-quant-model" target="_blank" rel="noopener">View on GitHub &rarr;</a>
++                </article>
++                <article class="card project">
++                    <p class="tag">Computer vision &middot; PolyU COMP4423</p>
++                    <h3>PolyU Campus Image Classifier</h3>
++                    <p>Classifies scene photos as inside or outside the PolyU main campus using classical computer vision features.</p>
++                    <ul><li>HSV, HOG and LBP features with an L1 logistic regression classifier</li><li>Split by whole location group to avoid leakage; 97.2% held-out test accuracy (35/36), with limits on that small test set stated openly</li><li>Local web app for predictions plus reproducible training, tests and ablation tools</li></ul>
++                    <div class="tech"><span>Python</span><span>scikit-learn</span><span>HOG / LBP</span><span>Web UI</span></div>
++                    <a class="link" href="https://github.com/moli0516/COMP4423_A2" target="_blank" rel="noopener">View on GitHub &rarr;</a>
++                </article>
+             </div>
+-            <div class="row reveal">
+-                <div class="skill-box">
+-                    <h3>
+-                        Skills
+-                    </h3>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40">
+-                    <span>
+-                        python
+-                    </span><br><br>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width="40" height="40">
+-                    <span>
+-                        HTML
+-                    </span><br><br>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" width="40" height="40">
+-                    <span>
+-                        CSS
+-                    </span><br><br>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40">
+-                    <span>
+-                        Javascript
+-                    </span><br><br>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" width="40" height="40">
+-                    <span>
+-                        Photoshop
+-                    </span><br><br>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" width="40" height="40">
+-                    <span>
+-                        MYSQL
+-                    </span><br><br>
+-                    <img src="https://camo.githubusercontent.com/f8f5c4f90fe3c43e5b7858360cf3a4eeffcaa0bdf7352c7c8c4b9c1489bb7f99/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f756e69747933642f756e69747933642d69636f6e2e737667" width="40" height="40">
+-                    <span>
+-                        Unity
+-                    </span><br><br>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" width="40" height="40">
+-                    <span>
+-                        C#
+-                    </span><br><br>
+-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" width="40" height="40">
+-                    <span>
+-                        C++
+-                    </span><br><br>
+-                </div>
+-                <div class="skill-box">
+-                    <h3>
+-                        Learning
+-                    </h3>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="40" height="40">
+-                    <span>
+-                        Python
+-                    </span><br><br>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width="40" height="40">
+-                    <span>
+-                        HTML
+-                    </span><br><br>
+-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" width="40" height="40">
+-                    <span>
+-                        CSS
+-                    </span><br><br>
+-                    <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" width="40" height="40">
+-                    <span>
+-                        Java
+-                    </span><br><br>
+-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" width="40" height="40">
+-                    <span>
+-                        C++
+-                    </span><br><br>
+-                </div>
++            <h3 class="sub">More on GitHub</h3>
++            <ul class="more"><li><a href="https://github.com/moli0516/RailRoadParkourGame" target="_blank" rel="noopener">RailRoadParkourGame</a> <span>Unity parkour game</span></li><li><a href="https://github.com/moli0516/ENAIEDU" target="_blank" rel="noopener">ENAIEDU</a> <span>Education project</span></li><li><a href="https://github.com/moli0516/A-simple-discord-bot" target="_blank" rel="noopener">A-simple-discord-bot</a> <span>Discord bot</span></li><li><a href="https://github.com/moli0516/Ceasar-cipher-encrypt-and-decrypt" target="_blank" rel="noopener">Ceasar-cipher-encrypt-and-decrypt</a> <span>Caesar cipher tool</span></li><li><a href="https://github.com/moli0516/DiscordSpamTool" target="_blank" rel="noopener">DiscordSpamTool</a> <span>Discord tool</span></li><li><a href="https://github.com/moli0516?tab=repositories" target="_blank" rel="noopener">All repositories</a></li></ul>
++        </section>
++
++        <section id="skills" class="section reveal">
++            <h2>Skills</h2>
++            <div class="grid skills">
++                <article class="card">
++                    <h3>Languages, web &amp; tools</h3>
++                    <ul class="chips"><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">Python</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg">C++</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">JavaScript</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg">TypeScript</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg">Next.js</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">PostgreSQL</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg">Supabase</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">Git</li></ul>
++                </article>
++                <article class="card">
++                    <h3>Data science &amp; ML</h3>
++                    <ul class="chips"><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg">Pandas</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg">NumPy</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scikitlearn/scikitlearn-original.svg">scikit-learn</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg">PyTorch</li><li><img alt="" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-original.svg">OpenCV</li><li>XGBoost</li><li>LightGBM</li><li>Optuna</li></ul>
++                </article>
+             </div>
+-            <div class="row reveal">
+-                <div class="github-box">
+-                    <h3>
+-                        Github Profile
+-                    </h3>
+-                    <a href="https://github.com/moli0516" target="_blank">
+-                        <img src="https://github-readme-stats.vercel.app/api?username=moli0516&theme=tokyonight&show_icons=true" width="100%">
+-                    </a>
+-                </div>
+-                <div class="github-box">
+-                    <h3>
+-                        Github Top Language
+-                    </h3>
+-                    <a href="https://github.com/moli0516" target="_blank">
+-                        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=moli0516&layout=compact&theme=tokyonight" width="100%">
+-                    </a>
+-                </div>
++            <div class="grid two stats">
++                <a class="card stat" href="https://github.com/moli0516" target="_blank" rel="noopener"><img loading="lazy" alt="GitHub stats for moli0516" src="https://github-readme-stats.vercel.app/api?username=moli0516&theme=tokyonight&show_icons=true&hide_border=true"></a>
++                <a class="card stat" href="https://github.com/moli0516" target="_blank" rel="noopener"><img loading="lazy" alt="Top languages for moli0516" src="https://github-readme-stats.vercel.app/api/top-langs/?username=moli0516&layout=compact&theme=tokyonight&hide_border=true"></a>
+             </div>
+-            <div class="text-box reveal">
+-                <h3>
+-                    Projects
+-                </h3>
+-                <div class="repos-row">
+-                    <div class="repos">
+-                        <a href="https://github.com/moli0516/RailRoadParkourGame" target="_blank">
+-                            <img src="https://github-readme-stats.vercel.app/api/pin/?username=moli0516&repo=RailRoadParkourGame&theme=tokyonight">
+-                        </a>
+-                    </div>
+-                    <div class="repos">
+-                        <a href="https://github.com/moli0516/DiscordSpamTool" target="_blank">
+-                            <img src="https://github-readme-stats.vercel.app/api/pin/?username=moli0516&repo=DiscordSpamTool&theme=tokyonight">
+-                        </a>
+-                    </div>
+-                    
+-                </div>
+-                <div class="repos-row">
+-                    <div class="repos">
+-                        <a href="https://github.com/moli0516/ENAIEDU" target="_blank">
+-                            <img src="https://github-readme-stats.vercel.app/api/pin/?username=moli0516&repo=ENAIEDU&theme=tokyonight">
+-                        </a>
+-                    </div>
+-                    <div class="repos">
+-                        <a href="https://github.com/moli0516/moli0516.github.io" target="_blank">
+-                            <img src="https://github-readme-stats.vercel.app/api/pin/?username=moli0516&repo=moli0516.github.io&theme=tokyonight">
+-                        </a>
+-                    </div>
+-                </div>
+-                <div class="repos-row">
+-                    <div class="repos">
+-                        <a href="https://github.com/moli0516/Ceasar-cipher-encrypt-and-decrypt" target="_blank">
+-                            <img src="https://github-readme-stats.vercel.app/api/pin/?username=moli0516&repo=Ceasar-cipher-encrypt-and-decrypt&theme=tokyonight">
+-                        </a>
+-                    </div>
+-                    <div class="repos">
+-                        <a href="https://github.com/moli0516/A-simple-discord-bot" target="_blank">
+-                            <img src="https://github-readme-stats.vercel.app/api/pin/?username=moli0516&repo=A-simple-discord-bot&theme=tokyonight">
+-                        </a>
+-                    </div>
+-                </div>
++        </section>
++
++        <section id="earlier" class="section reveal">
++            <h2>Earlier achievements</h2>
++            <ul class="timeline">
++                <li><span>2023&ndash;24</span>Participant, Hong Kong Olympiad in Informatics (HKOI)</li>
++                <li><span>2023</span>First class prize, HKIE Electronic Division STEM Bootcamps &ndash; 1-day STEM Robotics Workshop</li>
++                <li><span>2023</span>Participant, Hong Kong Physics Olympiad</li>
++                <li><span>2022</span>Participant, AI x HK OpenCup</li>
++                <li><span>&nbsp;</span>Participant, Metaverse Creator of Tomorrow workshop and competition</li>
++                <li><span>&nbsp;</span>Secondary school: Kau Yan College (Physics, ICT, Math M2)</li>
++            </ul>
++        </section>
++
++        <section id="contact" class="section reveal">
++            <h2>Contact</h2>
++            <div class="contact-row">
++                <a class="btn primary" href="mailto:kyeung516@gmail.com">Email</a>
++                <a class="btn" href="https://github.com/moli0516" target="_blank" rel="noopener">GitHub</a>
++                <a class="btn" href="https://discordapp.com/users/685116987201814592" target="_blank" rel="noopener">Discord</a>
++                <a class="btn" href="https://www.instagram.com/_ml.16__/" target="_blank" rel="noopener">Instagram</a>
++                <a class="btn" href="https://twitter.com/moli04291244" target="_blank" rel="noopener">Twitter</a>
+             </div>
+-            <div class="contact reveal">
+-                <h1>
+-                    Contact with me
+-                </h1>
+-                <div class="contact-row">
+-                    <span>
+-                        <a href="https://discordapp.com/users/685116987201814592" target="_blank">
+-                            <img src="https://www.svgrepo.com/show/331368/discord-v2.svg" width="40" height="40">
+-                            Discord - Moli#4676
+-                        </a>
+-                    </span><br><br>
+-                    <span>  
+-                        <a href="https://www.instagram.com/_ml.16__/" target="_blank">
+-                            <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" width="40" height="40">
+-                            Instagram - _ml.16__
+-                        </a>
+-                    </span><br><br>
+-                    <span>
+-                        <a href="https://twitter.com/moli04291244" target="_blank">
+-                            <img src="https://www.iconlogovector.com/uploads/images/2022/01/twitter-icon.png" width="40" height="40">
+-                            Twitter - moli04291244
+-                        </a>
+-                    </span>
+-                </div>
+-            </div>
+-            <div class="footer">
+-                <a href="https://github.com/moli0516/moli0516.github.io" target="_blank">
+-                    © 2022 Moli
+-                </a>
+-            </div>
+-        </div>
+-    </body>
+-</html>
+\ No newline at end of file
++        </section>
++    </main>
++
++    <footer class="footer">
++        <a href="https://github.com/moli0516/moli0516.github.io" target="_blank" rel="noopener">&copy; <span id="year">2026</span> Moli</a>
++    </footer>
++</body>
++</html>
+diff --git a/script/main.js b/script/main.js
+new file mode 100644
+index 0000000..52fad86
+--- /dev/null
++++ b/script/main.js
+@@ -0,0 +1,16 @@
++document.getElementById("year").textContent = new Date().getFullYear();
++
++const items = document.querySelectorAll(".reveal");
++if ("IntersectionObserver" in window) {
++    const io = new IntersectionObserver((entries) => {
++        entries.forEach((e) => {
++            if (e.isIntersecting) {
++                e.target.classList.add("active");
++                io.unobserve(e.target);
++            }
++        });
++    }, { threshold: 0.05 });
++    items.forEach((el) => io.observe(el));
++} else {
++    items.forEach((el) => el.classList.add("active"));
++}
